@@ -16,4 +16,17 @@ def sales_reports(log_file):
             print(line)
 
 # calling the funtion and ivoking log_file
-sales_reports(log_file)
+# sales_reports(log_file)
+
+
+def over_ten(log_file):
+    for line in log_file:
+        line = line.rstrip()
+        quantity = line[16:18]
+        quantity = quantity.rstrip()
+        # print(quantity)
+        if quantity > 10:
+            print(line)
+
+
+over_ten(log_file)
